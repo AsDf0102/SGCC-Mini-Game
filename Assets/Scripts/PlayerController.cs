@@ -64,9 +64,15 @@ public class PlayerController : MonoBehaviour
         // Collide Bugs
         if (collision.CompareTag("Bug") && !isInvincible)
         {
+            // Life Down
             currentLife--;
-            Debug.Log("충돌 발생! 남은 라이프 : " + currentLife);
-        
+            //   Debug.Log("충돌 발생! 남은 라이프 : " + currentLife);
+            //   Update UI 
+            if (uiManager != null)
+            {
+                uiManager.UpdateLifeUI(currentLife);
+            }
+
             Destroy(collision.gameObject); // 버그와 부딪히면 해당 버그 제거
         
             if (currentLife > 0)
