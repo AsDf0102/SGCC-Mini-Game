@@ -69,7 +69,7 @@ public class UIManager : MonoBehaviour
 
         // Result Scene UI
         resultPanel.SetActive(true);
-        finalScoreText.text="Final Score: "+currentScore;
+        finalScoreText.text="Final Score: " + currentScore;
         Debug.Log("게임 종료 및 결과창 출력");
     }
 
